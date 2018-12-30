@@ -1,0 +1,14 @@
+<form class="form-signin">
+  <div class="form-label-group">
+    <input  [(ngModel)]="login.userName" [ngModelOptions]="{standalone: true}" type="number" id="inputEmail" class="form-control" placeholder="Cognizant Employee ID" required autofocus>
+    <label for="inputEmail">Cognizant Employee ID</label>
+  </div>
+
+  <div class="form-label-group">
+    <input [(ngModel)]="login.password" [ngModelOptions]="{standalone: true}" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="singIn()">Sign in</button>
+  <p class="mt-5 mb-3 text-muted text-center"><a href="#">Sorry, I forgot my password</a></p>
+</form>
