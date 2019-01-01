@@ -7,7 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './utils/rest/HttpInterceptor';
 import { ErrorHandler } from './utils/rest/ErrorHandler';
 import { RestApi } from './utils/services/rest-calls';
-import {ToasterModule } from 'angular2-toaster';
+import { ToasterModule } from 'angular2-toaster';
 
 
 @NgModule({

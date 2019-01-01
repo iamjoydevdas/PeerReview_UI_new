@@ -11,3 +11,7 @@ https://medium.com/@beeman/tutorial-styling-angular-cli-v6-apps-with-bootstrap-8
 
 https://hackernoon.com/global-http-request-error-catching-in-angular-486a319f59ab
 https://hackernoon.com/global-http-error-catching-in-angular-4-3-9e15cc1e0a6b
+
+npm install rxjs-compat@6 --save
+npm install --save @ng-bootstrap/ng-bootstrap
+https://ng-bootstrap.github.io/#/components/accordion/api
