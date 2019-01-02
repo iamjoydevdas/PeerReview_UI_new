@@ -15,3 +15,9 @@ https://hackernoon.com/global-http-error-catching-in-angular-4-3-9e15cc1e0a6b
 npm install rxjs-compat@6 --save
 npm install --save @ng-bootstrap/ng-bootstrap
 https://ng-bootstrap.github.io/#/components/accordion/api
+
+
+for study only
+http://fuelinteractive.github.io/fuel-ui/#/component/accordion
+https://www.primefaces.org/primeng/#/blockui
+https://ngx-easy-table.eu/#/select-all-template

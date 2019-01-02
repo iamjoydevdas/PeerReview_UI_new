@@ -1,0 +1,38 @@
+<div class="dashboard">
+  <div class="row">
+    <!-- accordian start -->
+    <div class="col-3" >
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span class="hidden-xs">Peer Management</span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <div><a [routerLink]="['./admin/add']"><i class="fa fa-user-plus"></i> Add New Peer</a></div>
+            <div><a [routerLink]="['./admin/view']"><i class="fa fa-users"></i> <span class="hidden-xs"> View All Peers</span></a></div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>Designation Management</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div><a [routerLink]="['./admin/add']">Add New Designation</a></div>
+            </ng-template>
+          </ngb-panel>
+          <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <span>Role Management</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                  <div><a [routerLink]="['./admin/add']">Add New Role</a></div>
+              </ng-template>
+            </ngb-panel>
+      </ngb-accordion>
+    </div>
+    <!-- accordian end -->
+    <div class="col-9">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

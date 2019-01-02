@@ -4,6 +4,7 @@ import { RestApi } from '../../utils/services/rest-calls';
 import { Response } from '../../models/response/Response';
 import { CommonService } from '../../utils/storage/common.service';
 import { LoggedInUser } from '../../models/login/user/logged-in-user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-module',
@@ -18,7 +19,8 @@ export class LoginModuleComponent implements OnInit {
   loggedInUser:LoggedInUser;
   constructor(
     private rest:RestApi,
-    private storage:CommonService
+    private storage:CommonService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,15 @@ export class LoginModuleComponent implements OnInit {
         this.loggedInUser = <LoggedInUser>res.data;
         console.log(this.loggedInUser);
         this.storage.setLoggedInUser(this.loggedInUser); //saving user
+        switch(this.loggedInUser.role){
+          case 'ADMIN':
+            this.router.navigateByUrl('dashboard/admin/view');
+            break;
+          case 'REVIEWER':
+            break;
+          case 'EVALUTER':
+            break;
+        }
       })
     });
   }

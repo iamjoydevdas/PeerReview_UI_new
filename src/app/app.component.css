@@ -7,3 +7,7 @@
     width: 100%;
     text-align: center;
 }
+
+.card-header {
+    padding: 0px !important;
+ }
