@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from './common-module/common.module';
 import { AdminModule } from './admin-module/admin.module';
+import { EvaluaterModule } from './evaluater-module/evaluater.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,6 +20,7 @@ import { ToasterModule } from 'angular2-toaster';
     AppRoutingModule,
     CommonModule,
     AdminModule,
+    EvaluaterModule,
     HttpClientModule,
     ToasterModule.forRoot()
   ],

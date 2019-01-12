@@ -4,6 +4,7 @@ import { LoginModuleComponent } from './common-module/login-module/login-module.
 import { PeerDashboardManagementComponent } from './admin-module/peer-dasboard-management/peer-dashboard-management.component';
 import { NewPeerManagementComponent } from './admin-module/new-peer-management/new-peer-management.component';
 import { ExistingPeerManagementComponent } from './admin-module/existing-peer-management/existing-peer-management.component';
+import { RatingComponent } from './evaluater-module/rating/rating.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
       { path: 'admin/view', component: ExistingPeerManagementComponent },
       { path: 'admin/add', component: NewPeerManagementComponent }
     ]
-  }
+  },
+  { path: 'rate', component: RatingComponent }
 ]; 
 
 @NgModule({

@@ -5,14 +5,18 @@ import { Response } from '../../models/response/Response';
 
 @Injectable()
 export class ErrorHandler {
-    error:Error;
+    error: Error;
     constructor(
         private message: ToasterService
     ) { }
 
     public handleError(err: any) {
-        this.error = <Error>(<Response> err.error).error;     
-        console.log('Thanks', this.error.errorMessage);
-        this.message.pop('error','Something went wrong.', this.error.errorMessage);
+        this.error = <Error>(<Response>err.error).error;
+        if (this.error == undefined) {
+            this.message.pop('error', 'Something went wrong.', err.message);
+        } else {
+            console.log('Thanks', this.error.errorMessage);
+            this.message.pop('error', 'Something went wrong.', this.error.errorMessage);
+        }
     }
 }
