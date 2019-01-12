@@ -10,6 +10,7 @@ import { RequestInterceptor } from './utils/rest/HttpInterceptor';
 import { ErrorHandler } from './utils/rest/ErrorHandler';
 import { RestApi } from './utils/services/rest-calls';
 import { ToasterModule } from 'angular2-toaster';
+import { ManagerModule } from './manager-module/manager.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ToasterModule } from 'angular2-toaster';
     CommonModule,
     AdminModule,
     EvaluaterModule,
+    ManagerModule,
     HttpClientModule,
     ToasterModule.forRoot()
   ],

@@ -9,4 +9,5 @@ export class User {
 	createdTime:any;
 	updatedBy:string;
 	updatedTime:any;
+	rated:boolean;
 }

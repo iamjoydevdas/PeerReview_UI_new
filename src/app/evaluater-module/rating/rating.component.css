@@ -101,3 +101,9 @@ table.t-responsive {
     overflow: hidden;
     color: indigo;
   }
+
+  .btn-primary {
+    background-color: indigo;
+    border-color: indigo;
+
+}

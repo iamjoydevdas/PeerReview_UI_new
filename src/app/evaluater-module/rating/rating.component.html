@@ -17,10 +17,11 @@
         <td data-label="CTS ID">{{u.userId}}</td>
         <td data-label="Peer Name" align="center">{{u.fullName}}</td>
         <td data-label="Designation" align="center">{{u.designation}}</td>
-        <td data-label="Action" align="center"><i class="fa fa-star-o" (click)='open(content, u)'></i></td>
+        <td data-label="Action" align="center"><i class="fa fa-star-o" [ngClass]="{'fa-star':u.rated, 'fa-star-o':u.rated!=true}" (click)='open(content, u)'></i></td>
       </tr>
     </tbody>
   </table>
+  <button class="btn btn-primary" (click)="rate()">Rate</button>
 </div>
 
 
@@ -54,7 +55,7 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click');save(ratedSkills, user)">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="user.rated=true;modal.close('Save click');save(ratedSkills, user.userId)">Save</button>
   </div>
 </ng-template>
 

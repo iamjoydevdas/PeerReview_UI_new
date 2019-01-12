@@ -14,11 +14,13 @@
         </span>
         <div ngbDropdownMenu placement="left-bottom" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <span class="dropdown-item" href="#">Welcome</span>
-          <span class="dropdown-item" href="#">Joydev Das</span>
+          <span class="dropdown-item" href="#">{{loggedInUser.fullName}}</span>
           <div class="dropdown-divider"></div>
-          <span class="dropdown-item" href="#">Log out</span>
+          <span class="dropdown-item" href="#" (click)="logout()">Log out</span>
         </div>
       </li>
     </ul>
+    <div class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
   </div>
+ 
 </nav>
