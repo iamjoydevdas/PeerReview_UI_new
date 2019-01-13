@@ -6,10 +6,12 @@ import { NewPeerManagementComponent } from './admin-module/new-peer-management/n
 import { ExistingPeerManagementComponent } from './admin-module/existing-peer-management/existing-peer-management.component';
 import { DesktopComponent } from './manager-module/desktop/desktop.component';
 import { ChartComponent } from './manager-module/chart/chart.component';
+import { RatingComponent } from './evaluater-module/rating/rating.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginModuleComponent },
+  { path: 'rate', component: RatingComponent },
   {
     path: 'dashboard', component: PeerDashboardManagementComponent, children: [
       { path: 'admin/view', component: ExistingPeerManagementComponent },
