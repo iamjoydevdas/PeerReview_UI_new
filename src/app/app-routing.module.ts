@@ -4,7 +4,8 @@ import { LoginModuleComponent } from './common-module/login-module/login-module.
 import { PeerDashboardManagementComponent } from './admin-module/peer-dasboard-management/peer-dashboard-management.component';
 import { NewPeerManagementComponent } from './admin-module/new-peer-management/new-peer-management.component';
 import { ExistingPeerManagementComponent } from './admin-module/existing-peer-management/existing-peer-management.component';
-import { RatingComponent } from './evaluater-module/rating/rating.component';
+import { DesktopComponent } from './manager-module/desktop/desktop.component';
+import { ChartComponent } from './manager-module/chart/chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -15,7 +16,10 @@ const routes: Routes = [
       { path: 'admin/add', component: NewPeerManagementComponent }
     ]
   },
-  { path: 'rate', component: RatingComponent }
+  { path: 'manager', component: DesktopComponent, children: [
+    { path: 'rate', component: ChartComponent },
+    { path: 'grid', component: NewPeerManagementComponent }
+  ]}
 ]; 
 
 @NgModule({
