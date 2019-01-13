@@ -17,7 +17,7 @@ const routes: Routes = [
     ]
   },
   { path: 'manager', component: DesktopComponent, children: [
-    { path: 'rate', component: ChartComponent },
+    { path: 'rate/:type', component: ChartComponent },
     { path: 'grid', component: NewPeerManagementComponent }
   ]}
 ]; 

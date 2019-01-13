@@ -54,7 +54,7 @@ export class LoginModuleComponent implements OnInit {
               this.router.navigateByUrl('dashboard/admin/view');
               break;
             case 'REVIEWER':
-              this.router.navigateByUrl('manager/rate');
+              this.router.navigateByUrl('manager/rate/column');
               break;
             case 'EVALUTER':
               this.router.navigateByUrl('rate');
